@@ -137,92 +137,179 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 
+<style>
+/* ADD THIS TO YOUR <style> section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card iframe {
+    width: 100%;
+    height: 160px !important; /* SMALLER */
+    border: none;
+    display: block;
+}
+.product-card h3 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    text-align: center;
+    color: #333;
+}
+</style>
+<style>
+/* ADD THIS TO YOUR <style> section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card iframe {
+    width: 100%;
+    height: 160px !important; /* SMALLER */
+    border: none;
+    display: block;
+}
+.product-card h3 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    background: #f8f9fa;
+    text-align: center;
+    color: #333;
+}
+</style>
 
-    <!-- ✅ YOUR PDFs WORKING HERE -->
-    <section id="catalog" class="pdf-section">
-    <div class="container">
-        <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #FF8C00;">📄 Product Catalogs</h2>
-        <div class="product-grid">  <!-- SAME GRID as products! -->
-            
-            <!-- HARSHWAL RANGOLI CARD -->
-            <div class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #FF8C00, #FF6600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🎨</div>
-                <h3>Harshwal Rangoli</h3>
-                <a href="Harshwal%20Rangoli.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Harshwal%20Rangoli.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
+<!-- 🔥 ALL PDFs FIXED - CORRECT NAMES -->
+<section id="catalog" class="pdf-section">
+<div class="container">
+    <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.2rem; color: #FF8C00;">📄 Product Catalogs</h2>
+    <div class="product-grid">
+        
+        <!-- 1. HARSHWAL RANGOLI ✅ -->
+        <div class="product-card">
+            <iframe src="Harshwal%20Rangoli.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Harshwal Rangoli</h3>
+            <div class="btn-row">
+                <a href="Harshwal%20Rangoli.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Harshwal%20Rangoli.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
             </div>
-
-            <!-- ARCHI LOUVERS CARD -->
-            <div class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Archi Louvers</h3>
-                <a href="Archi%20Louvers%20PS%20Seamless.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Archi%20Louvers%20PS%20Seamless.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-            <!--Vivere APEX-->
-            <div class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere APEX</h3>
-                <a href="Vivre%20APEX.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Vivre%20APEX.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-             <!--Vivere Louvers-->
-
-             <div class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere Louvers new</h3>
-                <a href="Vivre%20Louvers.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Vivre%20Louvers.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-            <!--CRYSLA LINK-->
-            <div  class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere Louvers new</h3>
-                <a href="CRYSLA%20LINK.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="CRYSLA%20LINK.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-              <!--Vivre Louvers New-->
-            <div  class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere Louvers new</h3>
-                <a href="Vivre%20Louvers%20New.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Vivre%20Louvers%20New.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-              <!--Vivre Quarry-->
-            <div  class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere Quarry</h3>
-                <a href="Vivre%20Quarry.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Vivre%20Quarry.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-
-            <!--Lamilaxe Link-->
-            <div  class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Lamilaxe Link</h3>
-                <a href="Lamilaxe%20Link.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Lamilaxe%20Link.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-            <!--Vivere Finesse-->
-            <div  class="product-card">
-                <div style="height: 200px; background: linear-gradient(45deg, #228B22, #006600); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏠</div>
-                <h3>Vivere Finesse</h3>
-                <a href="Vivre%20Finesse.pdf" target="_blank" class="btn" style="background: #FF8C00; width: 100%; margin-bottom: 0.5rem;">👁️ VIEW</a>
-                <a href="Vivre%20Finesse.pdf" download class="btn" style="background: #228B22; width: 100%;">💾 DOWNLOAD</a>
-            </div>
-
-            
-
         </div>
+
+        <!-- 2. ARCHI LOUVERS ✅ FIXED -->
+        <div class="product-card">
+            <iframe src="Archi%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Archi Louvers</h3>
+            <div class="btn-row">
+                <a href="Archi%20Louvers.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Archi%20Louvers.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+        <!-- 3. VIVERE APEX ✅ -->
+        <div class="product-card">
+            <iframe src="Vivre%20APEX.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Vivere APEX</h3>
+            <div class="btn-row">
+                <a href="Vivre%20APEX.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Vivre%20APEX.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+        <!-- 4. VIVERE LOUVERS ✅ -->
+        <div class="product-card">
+            <iframe src="Vivre%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Vivere Louvers</h3>
+            <div class="btn-row">
+                <a href="Vivre%20Louvers.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Vivre%20Louvers.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+        <!-- 5. CRYSLA LINK ✅ FIXED -->
+        <div class="product-card">
+            <iframe src="CRYSLA%20LINK.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Crysla Link</h3>
+            <div class="btn-row">
+                <a href="CRYSLA%20LINK.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="CRYSLA%20LINK.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+        <!-- 6. VIVERE QUARRY ✅ -->
+        <div class="product-card">
+            <iframe src="Vivre%20Quarry.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Vivere Quarry</h3>
+            <div class="btn-row">
+                <a href="Vivre%20Quarry.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Vivre%20Quarry.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+      <!-- 7. LAMILAXE LINK - BULLETPROOF TEST -->
+<div class="product-card">
+    <div class="pdf-thumb" style="background: linear-gradient(45deg, #FF5722, #D84315); height: 150px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔗</div>
+    <h3>Lamilaxe Link</h3>
+    <div class="btn-row">
+        <a href="Lamilaxe Link.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+        <a href="Lamilaxe Link.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
     </div>
+</div>
+
+
+
+        <!-- 8. VIVERE FINESSE ✅ -->
+        <div class="product-card">
+            <iframe src="Vivre%20Finesse.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Vivere Finesse</h3>
+            <div class="btn-row">
+                <a href="Vivre%20Finesse.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="Vivre%20Finesse.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+        
+
+        <!-- 9. MOROLY NEW ✅ -->
+        <div class="product-card">
+            <iframe src="MOROLY%20NEW.pdf#view=FitH" loading="lazy"></iframe>
+            <h3>Moroly New</h3>
+            <div class="btn-row">
+                <a href="MOROLY%20NEW.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
+                <a href="MOROLY%20NEW.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
+            </div>
+        </div>
+
+    </div>
+</div>
 </section>
+
+
+
 
 
     <section id="qr" class="qr-section">
