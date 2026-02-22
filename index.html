@@ -650,19 +650,34 @@ function searchCode() {
         }
     }
 
-    if (pdfUrl) {
-        document.getElementById('pdfViewer').src = `${pdfUrl}#page=${targetPage}&zoom=110&view=FitH`;
-        results.innerHTML = `✅ "${code}" → Page ${targetPage}`;
-    } else {
-        results.innerHTML = `❌ "${code}" not found`;
-        results.className = 'error';
-    }
+  if (pdfUrl) {
+    const viewer = document.getElementById('pdfViewer');
     
+    // 🔥 METHOD 1: Android Chrome format
+    viewer.src = `${pdfUrl}#page=${targetPage}&zoom=100&view=FitH`;
+    
+    // 🔥 METHOD 2: Force reload after 1.5s (Android fix)
     setTimeout(() => {
-        results.innerHTML = 'Enter next code...';
-        results.className = 'loading';
-    }, 5000);
+        viewer.src = `${pdfUrl}#page=${targetPage}`;
+        viewer.contentWindow?.location.reload();
+    }, 1500);
+    
+    // 🔥 METHOD 3: Double-tap insurance
+    setTimeout(() => {
+        viewer.src = `${pdfUrl}#page=${targetPage}&zoom=110`;
+    }, 3000);
+    
+    results.innerHTML = `✅ "${code}" → <strong>Page ${targetPage}</strong> (${pdfUrl})`;
+} else {
+    results.innerHTML = `❌ "${code}" not found`;
+    results.className = 'error';
 }
+
+setTimeout(() => {
+    results.innerHTML = 'Enter next code...';
+    results.className = 'loading';
+}, 5000);
+
 
 
 // 🔥 EVENT LISTENERS - OUTSIDE FUNCTION (CORRECT PLACE)
