@@ -640,21 +640,221 @@ function searchCode() {
         else if (vapNum === 973 || vapNum === 971 || vapNum === 970) targetPage = 17;
         else targetPage = 3;
     }
-    else {
-        const pdfMap = {
-            'VL': {file: 'Vivre Louvers.pdf', page: 3},
-            'CI': {file: 'CRYSLA LINK.pdf', page: 1},
-            'VQ': {file: 'Vivre Quarry.pdf', page: 1},
-            'VF': {file: 'Vivre Finesse.pdf', page: 1}
-        };
-        for (let prefix in pdfMap) {
-            if (code.startsWith(prefix)) {
-                pdfUrl = pdfMap[prefix].file;
-                targetPage = pdfMap[prefix].page;
-                break;
-            }
-        }
-    }
+   else if (code.startsWith('VL')) {
+    pdfUrl = 'Vivre Louvers.pdf';
+    const vlNum = parseInt(code.slice(2));
+    
+    if (vlNum === 45) targetPage = 5;
+    else if (vlNum === 46) targetPage = 6;
+    else if (vlNum === 47) targetPage = 7;
+    else if (vlNum === 48) targetPage = 8;
+    else if (vlNum === 49) targetPage = 9;
+    else if (vlNum === 50) targetPage = 10;
+    else if (vlNum === 51) targetPage = 11;
+    else if (vlNum === 52) targetPage = 12;
+    else if (vlNum === 41) targetPage = 13;
+    else if (vlNum === 42) targetPage = 14;
+    else if (vlNum === 43) targetPage = 15;
+    else if (vlNum === 44) targetPage = 16;
+    else if (vlNum === 53) targetPage = 17;
+    else if (vlNum === 54) targetPage = 18;
+    else if (vlNum === 55) targetPage = 19;
+    else if (vlNum === 56) targetPage = 20;
+    else if (vlNum === 57) targetPage = 21;
+    else if (vlNum === 58) targetPage = 22;
+    else if (vlNum === 59) targetPage = 23;
+    else if (vlNum === 60) targetPage = 24;
+    else if (vlNum === 1) targetPage = 25;
+    else if (vlNum === 3) targetPage = 26;
+    else if (vlNum === 4) targetPage = 27;
+    else if (vlNum === 9) targetPage = 28;
+    else if (vlNum === 40) targetPage = 29;
+    else if (vlNum === 8) targetPage = 30;
+    else if (vlNum === 15) targetPage = 31;
+    else if (vlNum === 14) targetPage = 32;
+    else if (vlNum === 2) targetPage = 33;
+    else if (vlNum === 25) targetPage = 34;
+    else if (vlNum === 6) targetPage = 35;
+    else if (vlNum === 11) targetPage = 36;
+    else if (vlNum === 19) targetPage = 37;
+    else if (vlNum === 22) targetPage = 38;
+    else if (vlNum === 18) targetPage = 39;
+    else targetPage = 3; // Default VL page
+}
+   else if (code.startsWith('CI')) {
+    pdfUrl = 'CRYSLA LINK.pdf';
+    const ciNum = parseInt(code.slice(2));
+    
+    // Page 6
+    if (ciNum === 416 || ciNum === 417) targetPage = 6;
+    
+    // Page 7  
+    else if (ciNum === 418 || ciNum === 419) targetPage = 7;
+    
+    // Page 8
+    else if (ciNum === 420 || ciNum === 421) targetPage = 8;
+    
+    // Page 9
+    else if (ciNum === 414 || ciNum === 402 || ciNum === 406 || ciNum === 407) targetPage = 9;
+    
+    // Page 10
+    else if (ciNum === 411 || ciNum === 412) targetPage = 10;
+    
+    // Page 11
+    else if (ciNum === 401 || ciNum === 413 || ciNum === 404 || ciNum === 403) targetPage = 11;
+    
+    // Page 12
+    else if (ciNum === 405 || ciNum === 415 || ciNum === 409) targetPage = 12;
+    
+    // Page 13
+    else if (ciNum === 408 || ciNum === 410) targetPage = 13;
+    
+    // Page 14
+    else if ([101,102,105,106,109,111,113,127,135].includes(ciNum)) targetPage = 14;
+    
+    // Page 15
+    else if ([130,123,124,103,129,112].includes(ciNum)) targetPage = 15;
+    
+    // Page 16
+    else if ([119,132,114,117,108].includes(ciNum)) targetPage = 16;
+    
+    // Page 17
+    else if ([128,133,131,140,134,121].includes(ciNum)) targetPage = 17;
+    
+    // Page 18
+    else if ([120,118,125,110,107,104].includes(ciNum)) targetPage = 18;
+    
+    // Page 19
+    else if ([138,122,136,137,139,116].includes(ciNum)) targetPage = 19;
+    
+    // Page 20
+    else if ([142,141,115,143,144,126].includes(ciNum)) targetPage = 20;
+    
+    // Page 21
+    else if ([601,602,603,604].includes(ciNum)) targetPage = 21;
+    
+    // Page 22
+    else if ([605,606,607,608].includes(ciNum)) targetPage = 22;
+    
+    // Page 23
+    else if ([609,610,611,612].includes(ciNum)) targetPage = 23;
+    
+    // Page 24
+    else if ([701,702,703,704].includes(ciNum)) targetPage = 24;
+    
+    // Page 25
+    else if ([705,706,707,708].includes(ciNum)) targetPage = 25;
+    
+    // Page 26
+    else if ([709,710].includes(ciNum)) targetPage = 26;
+    
+    // Page 27
+    else if ([711,712].includes(ciNum)) targetPage = 27;
+    
+    // Page 28
+    else if ([201,202,203,209,210,215].includes(ciNum)) targetPage = 28;
+    
+    // Page 29
+    else if ([213,212,206,214,207,216].includes(ciNum)) targetPage = 29;
+    
+    // Page 30
+    else if ([211,204,208,205].includes(ciNum)) targetPage = 30;
+    
+    // Page 31
+    else if ([501,502,504,509,503,510].includes(ciNum)) targetPage = 31;
+    
+    // Page 32
+    else if ([505,507,508,511,512,506].includes(ciNum)) targetPage = 32;
+    
+    // Page 33
+    else if ([307,311].includes(ciNum)) targetPage = 33;
+    
+    // Page 34
+    else if ([308,309,303,302].includes(ciNum)) targetPage = 34;
+    
+    // Page 35
+    else if ([310,306,305,301].includes(ciNum)) targetPage = 35;
+    
+    // Page 36
+    else if ([801,802,803,804].includes(ciNum)) targetPage = 36;
+    
+    else targetPage = 1; // Default CI page
+}
+else if (code.startsWith('VQ')) {
+    pdfUrl = 'Vivre Quarry.pdf';
+    const vqNum = parseInt(code.slice(2));
+    
+    if (vqNum === 722) targetPage = 5;
+    else if (vqNum === 724) targetPage = 6;
+    else if (vqNum === 711) targetPage = 7;
+    else if (vqNum === 719) targetPage = 8;
+    else if (vqNum === 715) targetPage = 9;
+    else if (vqNum === 723) targetPage = 12;
+    else if (vqNum === 709) targetPage = 13;
+    else if (vqNum === 717) targetPage = 14;
+    else if (vqNum === 707) targetPage = 15;
+    else if (vqNum === 725) targetPage = 18;
+    else if (vqNum === 726) targetPage = 19;
+    else if (vqNum === 710) targetPage = 20;
+    else if (vqNum === 712) targetPage = 21;
+    else if (vqNum === 720) targetPage = 22;
+    else if (vqNum === 721) targetPage = 23;
+    else if (vqNum === 701) targetPage = 24;
+    else if (vqNum === 727) targetPage = 27;
+    else if (vqNum === 713) targetPage = 28;
+    else if (vqNum === 702) targetPage = 29;
+    else if (vqNum === 716) targetPage = 30;
+    else if (vqNum === 703) targetPage = 31;
+    else if (vqNum === 728) targetPage = 34;
+    else if (vqNum === 714) targetPage = 35;
+    else if (vqNum === 718) targetPage = 36;
+    else if (vqNum === 704) targetPage = 39;
+    else if (vqNum === 705) targetPage = 40;
+    else if (vqNum === 706) targetPage = 41;
+    else if (vqNum === 708) targetPage = 42;
+    else targetPage = 1;
+}
+else if (code.startsWith('VF')) {
+    pdfUrl = 'Vivre Finesse.pdf';
+    const vfNum = parseInt(code.slice(2));
+    
+    if (vfNum === 633) targetPage = 6;
+    else if (vfNum === 635) targetPage = 7;
+    else if (vfNum === 625) targetPage = 9;
+    else if (vfNum === 626) targetPage = 10;
+    else if (vfNum === 627) targetPage = 11;
+    else if (vfNum === 628) targetPage = 12;
+    else if (vfNum === 629) targetPage = 13;
+    else if (vfNum === 630) targetPage = 14;
+    else if (vfNum === 623) targetPage = 16;
+    else if (vfNum === 624) targetPage = 17;
+    else if (vfNum === 612) targetPage = 18;
+    else if (vfNum === 613) targetPage = 19;
+    else if (vfNum === 614) targetPage = 20;
+    else if (vfNum === 615) targetPage = 21;
+    else if (vfNum === 617) targetPage = 22;
+    else if (vfNum === 634) targetPage = 24;
+    else if (vfNum === 636) targetPage = 25;
+    else if (vfNum === 637) targetPage = 26;
+    else if (vfNum === 638) targetPage = 27;
+    else if (vfNum === 601) targetPage = 29;
+    else if (vfNum === 602) targetPage = 30;
+    else if (vfNum === 603) targetPage = 31;
+    else if (vfNum === 604) targetPage = 32;
+    else if (vfNum === 605) targetPage = 33;
+    else if (vfNum === 606) targetPage = 34;
+    else if (vfNum === 608) targetPage = 35;
+    else if (vfNum === 610) targetPage = 36;
+    else if (vfNum === 607) targetPage = 38;
+    else if (vfNum === 609) targetPage = 39;
+    else if (vfNum === 611) targetPage = 40;
+    else if (vfNum === 616) targetPage = 41;
+    else if (vfNum === 618 || vfNum === 619) targetPage = 42;
+    else if (vfNum === 620) targetPage = 44;
+    else if (vfNum === 621) targetPage = 45;
+    else if (vfNum === 622) targetPage = 46;
+    else targetPage = 1; 
+}
 
     if (pdfUrl) {
         const viewer = document.getElementById('pdfViewer');
