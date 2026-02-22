@@ -660,38 +660,28 @@ function searchCode() {
 }
 
 // 🔥 2. CRITICAL: EVENT LISTENERS OUTSIDE FUNCTION!
+// BUTTON VERSION
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('codeSearch');
+    const btn = document.getElementById('searchBtn');
     const results = document.getElementById('searchResults');
     
-    // 🔥 1. KEYUP (not input) - Works with click!
-    input.addEventListener('keyup', function(e) {
+    // Button shows when typing
+    input.addEventListener('keyup', function() {
         if (this.value.trim()) {
-            results.innerHTML = '✅ Ready! <strong>Click/Enter</strong>';
-            results.className = 'success';
-            results.style.cursor = 'pointer';  // Make clickable!
+            btn.style.background = '#4CAF50';
+            btn.style.opacity = '1';
+            results.innerHTML = '✅ Click SEARCH!';
         } else {
+            btn.style.background = '#ccc';
             results.innerHTML = 'Enter code...';
-            results.className = 'loading';
         }
     });
     
-    // 🔥 2. ENTER
+    // ALL buttons trigger search
+    btn.addEventListener('click', searchCode);
     input.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') searchCode();
-    });
-    
-    // 🔥 3. CLICK input = search!
-    input.addEventListener('click', function() {
-        if (this.value.trim()) searchCode();
-    });
-    
-    // 🔥 4. DOUBLE-CLICK = search
-    input.addEventListener('dblclick', searchCode);
-    
-    // 🔥 5. Auto-select text
-    input.addEventListener('focus', function() {
-        this.select();
     });
     
     input.focus();
