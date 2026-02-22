@@ -656,21 +656,29 @@ function searchCode() {
         }
     }
 
-    if (pdfUrl) {
-        const viewer = document.getElementById('pdfViewer');
-        // 🔥 SIMPLIFIED - Works on ALL devices!
+   if (pdfUrl) {
+    const viewer = document.getElementById('pdfViewer');
+    
+    // 🔥 ANDROID DETECT + FIX
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // MOBILE: Open new tab (Android Chrome LOVES this)
+        window.open(`${pdfUrl}#page=${targetPage}&zoom=100`, '_blank');
+        results.innerHTML = `✅ "${code}" → 📱 Page ${targetPage} opened!`;
+    } else {
+        // DESKTOP: iframe works perfectly
         viewer.src = `${pdfUrl}#page=${targetPage}`;
         results.innerHTML = `✅ "${code}" → <strong>Page ${targetPage}</strong> (${pdfUrl})`;
-    } else {
-        results.innerHTML = `❌ "${code}" not found`;
-        results.className = 'error';
     }
-
-    setTimeout(() => {
-        results.innerHTML = 'Enter next code...';
-        results.className = 'loading';
-    }, 5000);
+} else {
+    results.innerHTML = `❌ "${code}" not found`;
+    results.className = 'error';
 }
+
+setTimeout(() => {
+    results.innerHTML = 'Enter next code...';
+    results.className = 'loading';
+}, 5000);
+
 
 // 🔥 2. CRITICAL: EVENT LISTENERS OUTSIDE FUNCTION!
 // BUTTON VERSION
