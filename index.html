@@ -330,6 +330,14 @@ footer {
     </style>
 </head>
 <body>
+    <!-- HTML -->
+<input id="codeSearch" placeholder="RT301" autocomplete="off">
+<button id="searchBtn">🔍 SEARCH</button>
+<div id="searchResults">Enter code...</div>
+<iframe id="pdfViewer"></iframe>
+ 
+
+
     <!-- 🔥 FLOATING PARTICLES -->
     <div class="particles" id="particles"></div>
 
@@ -527,6 +535,14 @@ footer {
             height: 100%;
             border: none;
         }
+        #searchBtn {
+    transition: all 0.3s ease;
+}
+#searchBtn:hover {
+    background: #E55A2B !important;
+    transform: scale(1.02);
+}
+
     </style>
 </head>
 
@@ -537,9 +553,11 @@ footer {
     </div>
 
     <div class="search-container">
-        <input type="text" id="codeSearch" placeholder="RT321, EHG258, LX202..." autocomplete="off">
-        <div id="searchResults" class="loading">Ready to jump to code...</div>
-    </div>
+    <input type="text" id="codeSearch" placeholder="RT321, EHG258, LX202..." autocomplete="off">
+    <button id="searchBtn" style="width: 100%; padding: 20px; margin-top: 15px; background: #FF6B35; color: white; border: none; border-radius: 15px; font-size: 20px; font-weight: bold; cursor: pointer;">🔍 SEARCH CODE</button>
+    <div id="searchResults" class="loading">Ready to jump to code...</div>
+</div>
+
 
     <div id="pdfContainer">
         <iframe id="pdfViewer" src=""></iframe>
