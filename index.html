@@ -684,18 +684,22 @@ setTimeout(() => {
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('codeSearch');
     
-    // Enter key
+    // Enter key ✅
     input.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') searchCode();
     });
     
-    // Click input → search
-    input.addEventListener('click', searchCode);
+    // Click input → search ✅ FIXED
+    input.addEventListener('click', function() {
+        if (input.value.trim()) {
+            searchCode();
+        }
+    });
     
-    // Double-click → search
+    // Double-click → search ✅
     input.addEventListener('dblclick', searchCode);
     
-    // Dynamic button text
+    // Dynamic button text ✅
     input.addEventListener('input', function() {
         const results = document.getElementById('searchResults');
         if (this.value.trim()) {
@@ -706,12 +710,15 @@ document.addEventListener('DOMContentLoaded', function() {
             results.className = 'loading';
         }
     });
-    // ✅ FOCUS - Auto select text
+    
+    // Auto select text ✅
     input.addEventListener('focus', function() {
         this.select();
     });
+    
     input.focus();
 });
+
 </script>
 
 </body>
