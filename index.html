@@ -3,299 +3,1012 @@
 <head> 
 <meta name="google-site-verification" content="aJKQe4W0idkIp2LlkvWkEDbsKzfo_RkFq3tB4tle1To" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J.S.K. Decor | Premium Laminate Sheets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>J.S.K. Decor | Premium Laminates Bengaluru</title>
     <style>
-/* 🔥 CLEAN MOBILE-READY CSS - NO DUPLICATES */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); }
+/* 🔥 2026 TREND: GLASS + 3D + MICRO-ANIMATIONS */
+* {margin:0;padding:0;box-sizing:border-box;}
+:root {
+    --primary-glow: #FF8C00;
+    --whatsapp: #25D366;
+    --glass-bg: rgba(255,255,255,0.12);
+    --text-glow: rgba(255,140,0,0.6);
+}
 
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-header { background: linear-gradient(90deg, #FF8C00, #228B22); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-nav { display: flex; justify-content: space-between; align-items: center; }
-nav h1 { font-size: 1.8rem; }
-nav ul { display: flex; list-style: none; }
-nav li { margin-left: 2rem; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+html {scroll-behavior:smooth;}
+body { 
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
 
-.hero { background: #111; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 80px; }
-.hero-content h2 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
-.hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+/* 🔥 GLASSMORPHISM 2026 TREND */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    box-shadow: 
+        0 25px 50px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+}
 
-.btn { display: inline-block; padding: 15px 30px; background: #FF8C00; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,140,0,0.4); }
-.whatsapp-btn { background: #228B22; animation: pulse 2s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,139,34,0.7); } 70% { box-shadow: 0 0 0 20px rgba(34,139,34,0); } 100% { box-shadow: 0 0 0 0 rgba(34,139,34,0); } }
+/* 🔥 FLOATING PARTICLES */
+.particles {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.particle {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: radial-gradient(circle, var(--primary-glow), transparent);
+    border-radius: 50%;
+    animation: float 20s linear infinite;
+}
+@keyframes float {
+    0% {transform: translateY(100vh) rotate(0deg); opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {transform: translateY(-100vh) rotate(360deg); opacity: 0;}
+}
 
-/* 🔥 PERFECT PRODUCT GRID */
+/* HEADER - STICKY GLOW */
+header {
+    background: linear-gradient(90deg, var(--primary-glow), #228B22);
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    padding: 1rem 0; box-shadow: 0 10px 40px rgba(255,140,0,0.4);
+    animation: headerGlow 4s ease-in-out infinite alternate;
+}
+@keyframes headerGlow {
+    0% {box-shadow: 0 10px 40px rgba(255,140,0,0.4);}
+    100% {box-shadow: 0 10px 60px rgba(255,140,0,0.7);}
+}
+nav {max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;justify-content:space-between;align-items:center;}
+nav h1 {font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 900;}
+nav ul {display:flex;list-style:none;gap:2rem;}
+nav a {color:white;font-weight:700;text-decoration:none;transition:all 0.3s;}
+nav a:hover {color:#FFD700; transform: scale(1.1); text-shadow: 0 0 10px currentColor;}
+
+/* 🔥 HERO - FULLSCREEN IMMERSIVE */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; position: relative; overflow: hidden;
+    margin-top: 0 !important;
+}
+.hero-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255,140,0,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(34,139,34,0.15) 0%, transparent 50%);
+    animation: heroPulse 8s ease-in-out infinite;
+}
+@keyframes heroPulse {0%,100%{opacity:0.7;}50%{opacity:1;}}
+.peacock {
+    position: absolute; height: clamp(200px, 30vw, 400px); opacity: 0.4; z-index: 2;
+    animation: floatPeacock 12s ease-in-out infinite;
+}
+.peacock.left {left: 5%; animation-delay: 0s;}
+.peacock.right {right: 5%; transform: scaleX(-1); animation-delay: 4s;}
+@keyframes floatPeacock {
+    0%,100% {transform: translateY(0) rotate(0deg);}
+    33% {transform: translateY(-30px) rotate(5deg);}
+    66% {transform: translateY(-15px) rotate(-3deg);}
+}
+
+.hero-content {
+    position: relative; z-index: 5; padding: clamp(2rem, 5vw, 4rem);
+    animation: heroSlideIn 1.2s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+@keyframes heroSlideIn {
+    from {opacity: 0; transform: translateY(60px) scale(0.9);}
+    to {opacity: 1; transform: translateY(0) scale(1);}
+}
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    background: linear-gradient(135deg, var(--primary-glow), #FFD700, var(--primary-glow));
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 40px var(--text-glow);
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+@keyframes titleGlow {0%{filter: drop-shadow(0 0 20px var(--text-glow));}100%{filter: drop-shadow(0 0 40px var(--text-glow));}}
+.hero p {font-size: clamp(1.2rem, 3vw, 1.8rem); margin-bottom: 3rem; opacity: 0.95;}
+
+.cta-btn {
+    display: inline-block; padding: clamp(1.2rem, 3vw, 1.6rem) clamp(2rem, 5vw, 3.5rem);
+    background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+    color: white; font-weight: 800; font-size: clamp(1rem, 2.5vw, 1.3rem);
+    border-radius: 50px; text-decoration: none; position: relative;
+    overflow: hidden; transform-style: preserve-3d;
+    animation: ctaPulse 2s infinite;
+}
+@keyframes ctaPulse {
+    0% {box-shadow: 0 0 0 0 rgba(37,211,102,0.7);}
+    70% {box-shadow: 0 0 0 25px rgba(37,211,102,0);}
+    100% {box-shadow: 0 0 0 0 rgba(37,211,102,0);}
+}
+.cta-btn::before {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s;
+}
+.cta-btn:hover::before {left: 100%;}
+.cta-btn:hover {transform: translateY(-8px) scale(1.05); box-shadow: 0 25px 50px rgba(37,211,102,0.4);}
+
+/* 🔥 3D PRODUCT CARDS - MOBILE FIRST */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem; margin-top: 2rem;
+    max-width: 1400px; margin: 0 auto; padding: 4rem 1rem;
+    display: grid; gap: clamp(1.5rem, 4vw, 2.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 90vw, 380px), 1fr));
 }
 .product-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-    max-width: 100%;
+    background: var(--glass-bg);
+    border-radius: 28px; overflow: hidden;
+    position: relative; cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+    animation: cardStagger 0.8s forwards;
+    opacity: 0; transform: translateY(40px) scale(0.95);
 }
-.product-card:hover { transform: translateY(-5px); }
+.product-card:nth-child(1){animation-delay:0.1s;}
+.product-card:nth-child(2){animation-delay:0.2s;}
+.product-card:nth-child(3){animation-delay:0.3s;}
+.product-card:nth-child(4){animation-delay:0.4s;}
+.product-card:nth-child(5){animation-delay:0.5s;}
+.product-card:nth-child(6){animation-delay:0.6s;}
+.product-card:nth-child(7){animation-delay:0.7s;}
+.product-card:nth-child(8){animation-delay:0.8s;}
+.product-card:nth-child(9){animation-delay:0.9s;}
+@keyframes cardStagger {
+    to {opacity: 1; transform: translateY(0) scale(1);}
+}
+.product-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 5px; background: linear-gradient(90deg, var(--primary-glow), #FFD700);
+}
+.product-card:hover {
+    transform: translateY(-25px) rotateX(10deg) scale(1.02);
+    box-shadow: 0 50px 100px rgba(255,140,0,0.3);
+}
 .product-card iframe {
-    width: 100%; height: 200px;
-    border: none; display: block;
+    width: 100%; height: clamp(220px, 45vw, 280px);
+    border: none; display: block; transition: transform 0.4s;
 }
-.product-card h3 {
-    padding: 1rem; margin: 0;
-    font-size: 1.1rem; background: #f8f9fa;
-    text-align: center; color: #333;
+.product-card:hover iframe {transform: scale(1.04);}
+.product-info {
+    padding: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
 }
-.btn-row {
-    padding: 1rem; display: flex; gap: 0.5rem; justify-content: center;
+.product-info h3 {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    font-weight: 800; margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, white, #f0f0f0);
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.btn-row .btn { 
-    flex: 1; max-width: 100px; padding: 0.5rem 1rem; font-size: 0.9rem; 
+.btn-row {display: flex; gap: 1rem; justify-content: center;}
+.btn-row .btn {
+    flex: 1; padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 3vw, 2rem);
+    border-radius: 25px; font-weight: 700; font-size: clamp(0.9rem, 2vw, 1.1rem);
+    text-decoration: none; text-align: center;
+}
+.btn-view {background: var(--primary-glow);}
+.btn-download {background: var(--whatsapp);}
+
+section {padding: clamp(4rem, 8vw, 6rem) 0;}
+.section-title {
+    text-align: center; margin-bottom: clamp(3rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
+    background: linear-gradient(135deg, var(--primary-glow), #FFD700);
+    background-clip: text; -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.section-title::after {
+    content: ''; position: absolute; bottom: -1rem; left: 50%;
+    transform: translateX(-50%); width: 100px; height: 4px;
+    background: linear-gradient(90deg, var(--primary-glow), #FFD700);
+    border-radius: 2px;
 }
 
-section { padding: 80px 0; }
-.pdf-section { background: #111; color: white; }
-.qr-section { text-align: center; background: #25a3c9; color: white; }
-.qr-scanner { max-width: 300px; margin: 0 auto; }
-.qr-scanner img { width: 200px; height: 200px; border-radius: 10px; }
-footer { background: #000; color: white; text-align: center; padding: 2rem; }
-.location { font-weight: bold; }
 
-/* 🔥 MOBILE PERFECT */
-@media (max-width: 768px) { 
-    .hero-content h2 { font-size: 2.5rem; } 
-    nav ul { display: none; }
-    .product-grid { grid-template-columns: 1fr !important; gap: 1rem; }
-    .product-card iframe { height: 250px !important; }
-    #order-form { padding: 1.5rem 0.5rem !important; }
-    #order-form .container { max-width: 100% !important; padding: 0 1rem !important; }
-    #order-form form { padding: 1rem !important; }
-    #order-form input, #order-form textarea, #order-form select { padding: 12px 10px !important; font-size: 16px !important; }
-    #order-form h2 { font-size: 1.5rem !important; }
+
+/* ORDER FORM - MOBILE PERFECT */
+#order-form {
+    background: linear-gradient(135deg, #111827, #1f2937);
+}
+.form-container {
+    max-width: 600px; margin: 0 auto; padding: 2rem 1rem;
+}
+.form-glass {
+    padding: clamp(2rem, 5vw, 3rem); max-width: 550px; margin: 0 auto;
+}
+.form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+.form-group {
+    position: relative;
+}
+.form-group label {
+    display: block; font-weight: 700; margin-bottom: 0.75rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: clamp(1rem, 2.5vw, 1.3rem);
+    border: 2px solid transparent;
+    border-radius: 16px; font-size: clamp(1rem, 2vw, 1.1rem);
+    background: rgba(255,255,255,0.9); color: #1f2937;
+    transition: all 0.3s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--primary-glow);
+    box-shadow: 0 0 0 4px rgba(255,140,0,0.1);
+    transform: scale(1.02);
+}
+.full-width {grid-column: 1 / -1;}
+.form-submit {
+    width: 100%; padding: clamp(1.3rem, 3vw, 1.6rem);
+    background: linear-gradient(135deg, var(--whatsapp), #128C7E);
+    color: white; border: none; border-radius: 30px;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 800;
+    cursor: pointer; transition: all 0.4s;
+}
+.form-submit:hover {transform: translateY(-4px) scale(1.02); box-shadow: 0 20px 40px rgba(37,211,102,0.4);}
+
+/* CONTACT - MAP BUTTON */
+#contact {
+    background: linear-gradient(135deg, var(--primary-glow), #228B22);
+    text-align: center;
+}
+.map-link {
+    display: inline-block; padding: 1.5rem 2rem;
+    background: rgba(255,255,255,0.15); border-radius: 20px;
+    color: white; text-decoration: none; font-weight: 700;
+    margin-bottom: 3rem; font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+}
+.map-link:hover {background: rgba(255,255,255,0.25); transform: scale(1.05);}
+.cta-buttons {display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; max-width: 700px; margin: 0 auto;}
+.cta-buttons .btn {flex: 1; min-width: 220px; padding: clamp(1.2rem, 3vw, 1.6rem) clamp(2rem, 4vw, 3rem);}
+
+footer {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    text-align: center; padding: clamp(2rem, 5vw, 3rem) 1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+/* 🔥 PERFECT MOBILE - 2026 STANDARDS */
+@media (max-width: 768px) {
+    .form-row {grid-template-columns: 1fr;}
+    .cta-buttons {flex-direction: column; align-items: stretch;}
+    nav ul {display: none;}
+    .product-grid {padding: 2rem 0.5rem;}
 }
 @media (max-width: 480px) {
-    #order-form div[style*="grid"] { grid-template-columns: 1fr !important; }
+    .hero-content {padding: 1.5rem;}
+    .product-grid {gap: 1.5rem;}
 }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
+    <!-- 🔥 FLOATING PARTICLES -->
+    <div class="particles" id="particles"></div>
+
+    <header class="glass">
+        <nav>
             <h1>🛋️ J.S.K. Decor</h1>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#catalog">Catalogs</a></li>
-                <li><a href="#qr">QR Scanner</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">🏠 Home</a></li>
+                <li><a href="#catalog">📄 Catalogs</a></li>
+            
+                <li><a href="#order-form">🛒 Order</a></li>
+                <li><a href="#contact">📍 Location</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero" style="position: relative; overflow: hidden; background: #111;">
-        <!-- LEFT PEACOCK -->
-        <img src="pankh.png" alt="Mor Pankh Left" style="position: absolute; left: 2%; top: 20%; height: 500px; opacity: 0.6; z-index: 1; border: 2px solid rgb(7, 7, 7);">
+   <!-- 🔥 UPGRADED HERO SECTION - FANTASTIC VERSION -->
+<section id="home" class="hero">
+    <div class="hero-bg"></div>
+    
+    <!-- Floating luxury particles -->
+    <div style="position: absolute; top: 20%; left: 10%; width: 6px; height: 6px; 
+        background: radial-gradient(circle, #FFD700, transparent); border-radius: 50%;
+        animation: luxuryFloat 15s infinite linear; opacity: 0.6;"></div>
+    <div style="position: absolute; top: 60%; right: 15%; width: 8px; height: 8px; 
+        background: radial-gradient(circle, #FF8C00, transparent); border-radius: 50%;
+        animation: luxuryFloat 20s infinite linear reverse; opacity: 0.5;"></div>
+    
+    <div class="hero-content glass" style="
+        background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(37,211,102,0.1));
+        border: 2px solid rgba(255,255,255,0.15);
+        box-shadow: 0 40px 100px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+    ">
+        <h1 style="
+            background: linear-gradient(135deg, #FFD700, #FF8C00, #25D366, #FFD700);
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 50px rgba(255,215,0,0.6);
+        ">
+            J.S.K. Decor
+        </h1>
         
-        <!-- HERO CONTENT -->
-        <div class="hero-content" style="position: relative; z-index: 3; padding: 0 2rem;">
-            <h2 style="color: #FF8C00; font-size: 3.5rem; margin-bottom: 1rem;">J.S.K. Decor</h2>
-            <p style="font-size: 1.5rem; margin-bottom: 2rem;">Premium Laminate Sheet Ply for Stunning Home Transformations</p>
-            <a href="https://wa.me/917625060711?text=Hi%20J.S.K.%20Decor!%20I%20want%20laminate%20sheets" class="btn whatsapp-btn" style="font-size: 1.4rem; padding: 18px 40px; background: #25D366 !important;" target="_blank">📱 Order Now WhatsApp</a>
-        </div>
+        <p style="font-size: clamp(1.3rem, 3.5vw, 2rem); 
+                  background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
+                  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                  margin-bottom: 3.5rem; opacity: 0.95; line-height: 1.6;">
+            ✨ Premium Laminate Sheets<br>
+            <span style="font-weight: 800; color: #FFD700;">Bengaluru's #1 Choice</span> for Luxury Interiors ✨
+        </p>
         
-        <!-- RIGHT PEACOCK -->
-        <img src="pankh.png" alt="Mor Pankh Right" style="position: absolute; right: 2%; top: 20%; height: 500px; opacity: 0.6; z-index: 1; transform: scaleX(-1); border: 2px solid rgb(15, 15, 15);">
-    </section>
+        <!-- 🔥 FANTASTIC UPGRADED BUTTON -->
+        <a href="https://wa.me/917625060711?text=@Hi%20JSK%20Decor%20I%20want%20a%20laminate%20sheet" 
+           class="order-btn" target="_blank" style="
+            position: relative; overflow: visible;
+            background: conic-gradient(from 0deg at 50% 0%, #25D366 0deg, #20ba5f 90deg, #128C7E 180deg, #25D366 270deg, #20ba5f 360deg);
+            border: 3px solid rgba(255,255,255,0.4);
+            box-shadow: 
+                0 25px 60px rgba(37,211,102,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.5),
+                0 0 0 1px rgba(255,255,255,0.3);
+            backdrop-filter: blur(25px);
+        ">
+            🚀 START ORDERING<span style="margin-left: 12px; font-size: 1.3rem;">✨</span>
+            
+            <!-- Diamond shine effect -->
+            <div style="position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px;
+                        background: conic-gradient(from 45deg, transparent 0deg, rgba(255,255,255,0.6) 50deg, transparent 100deg);
+                        border-radius: 63px; z-index: -1; filter: blur(10px); opacity: 0;
+                        transition: opacity 0.6s;"></div>
+        </a>
+    </div>
+</section>
 
-    <!-- 🔥 ALL PDFs SECTION -->
-    <section id="catalog" class="pdf-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.2rem; color: #FF8C00;">📄 Product Catalogs</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <iframe src="Harshwal%20Rangoli.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Harshwal Rangoli</h3>
-                    <div class="btn-row">
-                        <a href="Harshwal%20Rangoli.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Harshwal%20Rangoli.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Archi%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Archi Louvers</h3>
-                    <div class="btn-row">
-                        <a href="Archi%20Louvers.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Archi%20Louvers.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Vivre%20APEX.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Vivere APEX</h3>
-                    <div class="btn-row">
-                        <a href="Vivre%20APEX.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Vivre%20APEX.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Vivre%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Vivere Louvers</h3>
-                    <div class="btn-row">
-                        <a href="Vivre%20Louvers.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Vivre%20Louvers.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="CRYSLA%20LINK.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>CRYSLA LINK</h3>
-                    <div class="btn-row">
-                        <a href="CRYSLA%20LINK.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="CRYSLA%20LINK.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Vivre%20Quarry.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Vivere Quarry</h3>
-                    <div class="btn-row">
-                        <a href="Vivre%20Quarry.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Vivre%20Quarry.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Lamilaxe%20Link.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Lamilaxe Link</h3>
-                    <div class="btn-row">
-                        <a href="Lamilaxe%20Link.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Lamilaxe%20Link.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Vivre%20Finesse.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Vivere Finesse</h3>
-                    <div class="btn-row">
-                        <a href="Vivre%20Finesse.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Vivre%20Finesse.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <iframe src="Moroly%20New.pdf#view=FitH" loading="lazy"></iframe>
-                    <h3>Moroly New</h3>
-                    <div class="btn-row">
-                        <a href="Moroly%20New.pdf" target="_blank" class="btn" style="background: #FF8C00;">👁️ VIEW</a>
-                        <a href="Moroly%20New.pdf" download class="btn" style="background: #228B22;">💾 DL</a>
-                    </div>
+<style>
+@keyframes luxuryFloat {
+    0% {transform: translateY(100vh) rotate(0deg); opacity: 0;}
+    10% {opacity: 0.8;}
+    90% {opacity: 0.8;}
+    100% {transform: translateY(-100vh) rotate(360deg); opacity: 0;}
+}
+
+@keyframes gradientShift {
+    0%, 100% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+}
+
+.order-btn {
+    display: inline-block; padding: 24px 60px;
+    color: white; font-weight: 900; font-size: clamp(1.15rem, 3vw, 1.5rem);
+    text-decoration: none; border-radius: 65px; position: relative;
+    transform-style: preserve-3d;
+    animation: whatsappPulse 2s infinite, luxuryBreathe 5s ease-in-out infinite;
+    transition: all 0.5s cubic-bezier(0.25,0.8,0.25,1);
+}
+
+@keyframes whatsappPulse {
+    0% {box-shadow: 0 25px 60px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.6);}
+    70% {box-shadow: 0 25px 60px rgba(37,211,102,0.4), 0 0 0 35px rgba(37,211,102,0);}
+    100% {box-shadow: 0 25px 60px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0);}
+}
+
+@keyframes luxuryBreathe {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.025);}
+}
+
+.order-btn:hover {
+    transform: translateY(-15px) scale(1.08) rotateX(12deg);
+    box-shadow: 
+        0 40px 90px rgba(37,211,102,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 0 0 1px rgba(255,255,255,0.5);
+}
+
+.order-btn:hover div {opacity: 1;}
+
+/* Light sweep effect */
+.order-btn::after {
+    content: ''; position: absolute; top: 0; left: -150%;
+    width: 150%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+    transition: left 1s;
+}
+.order-btn:hover::after {left: 150%;}
+</style>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSK Decor - Laminate Code Search</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .search-container {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        #codeSearch {
+            width: 100%;
+            padding: 20px;
+            font-size: 24px;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        #searchResults {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 15px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .success { background: linear-gradient(135deg, #4CAF50, #45a049); color: white; }
+        .error { background: linear-gradient(135deg, #f44336, #da190b); color: white; }
+        .loading { background: linear-gradient(135deg, #FF9800, #F57C00); color: white; }
+        #pdfContainer {
+            max-width: 1200px;
+            margin: 30px auto;
+            height: 70vh;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            background: #222;
+        }
+        #pdfViewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍   Search Laminate Code</h1>
+        <p>Enter code → PDF opens p>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="codeSearch" placeholder="RT321, EHG258, LX202..." autocomplete="off">
+        <div id="searchResults" class="loading">Ready to jump to code...</div>
+    </div>
+
+    <div id="pdfContainer">
+        <iframe id="pdfViewer" src=""></iframe>
+    </div>
+    
+<script>
+function searchCode() {
+    const code = document.getElementById('codeSearch').value.trim().toUpperCase();
+    const results = document.getElementById('searchResults');
+    
+    if (!code) {
+        results.innerHTML = '⚠️ Enter code like RT321';
+        results.className = 'error';
+        return;
+    }
+
+    results.innerHTML = '🎯 Finding exact page...';
+    results.className = 'success';
+
+    let pdfUrl = '';
+    let targetPage = 1;
+
+    // LAMILAXE (EHG,LX,ZMT,DZL,SF) - Page 1
+    const lamilaxePrefixes = ['EHG', 'LX', 'ZMT', 'DZL'];
+    if (lamilaxePrefixes.some(p => code.startsWith(p)) || code.startsWith('SF')) {
+        pdfUrl = 'Lamilaxe link.pdf';
+        targetPage = 1;
+    }
+    // MOROLY NEW (HGL,MT,M,SF) - Page 1
+    else if (['HGL', 'MT', 'M'].some(p => code.startsWith(p)) || code.startsWith('SF')) {
+        pdfUrl = 'Moroly New.pdf';
+        targetPage = 1;
+    }
+    // RT CODES - DYNAMIC PAGES
+    else if (code.startsWith('RT')) {
+        pdfUrl = 'Harshwal Rangoli.pdf';
+        const rtNum = parseInt(code.slice(2)); // RT301 → 301
+        if (rtNum >= 301 && rtNum <= 308) targetPage = 3;
+        else if (rtNum >= 309 && rtNum <= 316) targetPage = 4;
+        else if (rtNum >= 317 && rtNum <= 324) targetPage = 5;
+        else if (rtNum >= 325 && rtNum <= 332) targetPage = 6;
+        else targetPage = 5; // default
+    }
+    // HARSHWAL - Page 3
+    else if (code.startsWith('HARSHWAL')) {
+        pdfUrl = 'Harshwal Rangoli.pdf';
+        targetPage = 3;
+    }
+    // AL CODES - COMPLEX MAPPING
+    else if (code.startsWith('AL')) {
+        pdfUrl = 'Archi Louvers.pdf';
+        const alNum = parseInt(code.slice(2)); // AL2001 → 2001
+        
+        if (alNum >= 2001 && alNum <= 2003) targetPage = 4;
+        else if (alNum >= 2004 && alNum <= 2006) targetPage = 5;
+        else if (alNum >= 2007 && alNum <= 2009) targetPage = 6;
+        else if (alNum >= 2010 && alNum <= 2012) targetPage = 8;
+        else if (alNum >= 2013 && alNum <= 2015) targetPage = 9;
+        else if (alNum >= 2016 && alNum <= 2018) targetPage = 10;
+        else if (alNum >= 2019 && alNum <= 2021) targetPage = 12;
+        else if (alNum >= 2022 && alNum <= 2024) targetPage = 13;
+        else if (alNum >= 2028 && alNum <= 2029) targetPage = 14;
+        else if (alNum >= 2030 && alNum <= 2031) targetPage = 16;
+        else if (alNum >= 2032 && alNum <= 2033) targetPage = 17;
+        else if (alNum === 2027 || alNum === 2034) targetPage = 18;
+        else if (alNum === 2035 || alNum === 2036) targetPage = 19;
+        else targetPage = 1; // default
+    }
+    // ARCHI - Page 1
+    else if (code.startsWith('ARCHI')) {
+        pdfUrl = 'Archi Louvers.pdf';
+        targetPage = 1;
+    }
+    // VAP CODES - COMPLEX MAPPING
+    else if (code.startsWith('VAP')) {
+        pdfUrl = 'Vivre APEX.pdf';
+        const vapNum = parseInt(code.slice(3)); // VAP964 → 964
+        
+        if (vapNum === 964) targetPage = 4;
+        else if (vapNum === 962 || vapNum === 963) targetPage = 5;
+        else if (vapNum === 980 || vapNum === 979 || vapNum === 965) targetPage = 6;
+        else if (vapNum === 958 || vapNum === 959) targetPage = 7;
+        else if (vapNum === 960 || vapNum === 961) targetPage = 8;
+        else if (vapNum === 969) targetPage = 9;
+        else if (vapNum === 968 || vapNum === 966 || vapNum === 967) targetPage = 10;
+        else if (vapNum === 974 || vapNum === 975 || vapNum === 976) targetPage = 11;
+        else if (vapNum === 977 || vapNum === 978 || vapNum === 951) targetPage = 12;
+        else if (vapNum === 954) targetPage = 13;
+        else if (vapNum === 953 || vapNum === 955) targetPage = 14;
+        else if (vapNum === 956 || vapNum === 952 || vapNum === 957) targetPage = 15;
+        else if (vapNum === 972) targetPage = 16;
+        else if (vapNum === 973 || vapNum === 971 || vapNum === 970) targetPage = 17;
+        else targetPage = 3; // default
+    }
+    // OTHER CODES
+    else {
+        const pdfMap = {
+            'VL': {file: 'Vivre Louvers.pdf', page: 3},
+            'CI': {file: 'CRYSLA LINK.pdf', page: 1},
+            'VQ': {file: 'Vivre Quarry.pdf', page: 1},
+            'VF': {file: 'Vivre Finesse.pdf', page: 1}
+        };
+        
+        for (let prefix in pdfMap) {
+            if (code.startsWith(prefix)) {
+                pdfUrl = pdfMap[prefix].file;
+                targetPage = pdfMap[prefix].page;
+                break;
+            }
+        }
+    }
+
+    if (pdfUrl) {
+        // Load PDF with exact page
+        document.getElementById('pdfViewer').src = `${pdfUrl}#page=${targetPage}&zoom=3`;
+        results.innerHTML = `✅ "${code}" → Page ${targetPage} (${pdfUrl})`;
+    } else {
+        results.innerHTML = `❌ "${code}" not found`;
+        results.className = 'error';
+    }
+    
+    setTimeout(() => {
+        results.innerHTML = 'Enter next code...';
+        results.className = 'loading';
+    }, 5000);
+}
+
+// 🔥 EVENT LISTENERS - OUTSIDE FUNCTION (CORRECT PLACE)
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('codeSearch');
+    
+    // Enter key
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') searchCode();
+    });
+    
+    // Click input → search
+    input.addEventListener('click', searchCode);
+    
+    // Double-click → search
+    input.addEventListener('dblclick', searchCode);
+    
+    // Dynamic button text
+    input.addEventListener('input', function() {
+        const results = document.getElementById('searchResults');
+        if (this.value.trim()) {
+            results.innerHTML = 'Ready to jump to code...';
+            results.className = 'success';
+        } else {
+            results.innerHTML = 'Enter code...';
+            results.className = 'loading';
+        }
+    });
+    
+    input.focus();
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+   
+<!-- 🔥 PERFECT PRODUCT CATALOGS - ALL 9 FIXED -->
+<section id="catalog">
+    <h2 class="section-title">📄 Premium Collections</h2>
+    <div class="product-grid">
+        <!-- 1. Harshwal Rangoli -->
+        <div class="product-card">
+            <iframe src="Harshwal%20Rangoli.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🌺 Harshwal Rangoli</h3>
+                <div class="btn-row">
+                    <a href="Harshwal%20Rangoli.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Harshwal%20Rangoli.pdf" download class="btn btn-download">💾 Download</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="qr" class="qr-section">
-        <div class="container">
-            <h2 style="margin-bottom: 1rem; color: #FF8C00;">📱 QR Scanner: See Applications</h2>
-            <p>Scan to view how laminates look in real interiors!</p>
-            <div class="qr-scanner">
-                <img src="qr-code.png" alt="QR Code">
-                <p>Point camera at QR → See decor examples (kitchen, walls, furniture).</p>
+        <!-- 2. Archi Louvers -->
+        <div class="product-card">
+            <iframe src="Archi%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🏛️ Archi Louvers</h3>
+                <div class="btn-row">
+                    <a href="Archi%20Louvers.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Archi%20Louvers.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section id="order-form" style="background: linear-gradient(135deg, #1a1a1a, #111); color: white; padding: 2rem 1rem;">
-        <div class="container" style="max-width: 500px; margin: 0 auto; text-align: center;">
-            <h2 style="color: #FF8C00; font-size: 1.8rem; margin-bottom: 1rem;">📋 Quick Order</h2>
-            <form id="quickOrderForm" style="background: rgba(255,140,0,0.1); padding: 1.5rem; border-radius: 15px; border: 2px solid #FF8C00;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+        <!-- 3. Vivere APEX -->
+        <div class="product-card">
+            <iframe src="Vivre%20APEX.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>⭐ Vivere APEX</h3>
+                <div class="btn-row">
+                    <a href="Vivre%20APEX.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Vivre%20APEX.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Vivere Louvers -->
+        <div class="product-card">
+            <iframe src="Vivre%20Louvers.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🎨 Vivere Louvers</h3>
+                <div class="btn-row">
+                    <a href="Vivre%20Louvers.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Vivre%20Louvers.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. CRYSLA LINK -->
+        <div class="product-card">
+            <iframe src="CRYSLA%20LINK.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>💎 CRYSLA LINK</h3>
+                <div class="btn-row">
+                    <a href="CRYSLA%20LINK.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="CRYSLA%20LINK.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Vivere Quarry -->
+        <div class="product-card">
+            <iframe src="Vivre%20Quarry.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🪨 Vivere Quarry</h3>
+                <div class="btn-row">
+                    <a href="Vivre%20Quarry.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Vivre%20Quarry.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Lamilaxe Link -->
+        <div class="product-card">
+            <iframe src="Lamilaxe%20Link.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🔗 Lamilaxe Link</h3>
+                <div class="btn-row">
+                    <a href="Lamilaxe%20Link.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Lamilaxe%20Link.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. Vivere Finesse -->
+        <div class="product-card">
+            <iframe src="Vivre%20Finesse.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>✨ Vivere Finesse</h3>
+                <div class="btn-row">
+                    <a href="Vivre%20Finesse.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Vivre%20Finesse.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Moroly New -->
+        <div class="product-card">
+            <iframe src="Moroly%20New.pdf#view=FitH" loading="lazy"></iframe>
+            <div class="product-info">
+                <h3>🆕 Moroly New</h3>
+                <div class="btn-row">
+                    <a href="Moroly%20New.pdf" target="_blank" class="btn btn-view">👁️ View</a>
+                    <a href="Moroly%20New.pdf" download class="btn btn-download">💾 Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <section id="order-form">
+        <div class="container" style="max-width:550px;margin:0 auto;text-align:center;">
+            <h2 style="color:#FF8C00;font-size:2.2rem;margin-bottom:2rem;">📋 Quick Order Form</h2>
+            <form id="quickOrderForm" class="glass" style="padding:2.5rem;border-radius:25px;">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
                     <div>
-                        <label style="display: block; font-size: 0.9rem; color: #FF8C00; margin-bottom: 0.3rem;">👤 Name</label>
-                        <input type="text" id="customerName" required style="width: 100%; padding: 10px 8px; border-radius: 8px; border: 1px solid #FF8C00; font-size: 0.95rem;">
+                        <label style="display:block;font-size:1rem;color:#FF8C00;margin-bottom:0.5rem;font-weight:bold;">👤 Name *</label>
+                        <input type="text" id="customerName" required style="width:100%;padding:15px;border-radius:12px;border:2px solid #FF8C00;font-size:1rem;">
                     </div>
                     <div>
-                        <label style="display: block; font-size: 0.9rem; color: #228B22; margin-bottom: 0.3rem;">📱 Phone</label>
-                        <input type="tel" id="customerPhone" required style="width: 100%; padding: 10px 8px; border-radius: 8px; border: 1px solid #228B22; font-size: 0.95rem;">
+                        <label style="display:block;font-size:1rem;color:#25D366;margin-bottom:0.5rem;font-weight:bold;">📱 Phone *</label>
+                        <input type="tel" id="customerPhone" required style="width:100%;padding:15px;border-radius:12px;border:2px solid #25D366;font-size:1rem;">
                     </div>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
                     <div>
-                        <label style="display: block; font-size: 0.9rem; color: #FF6B35; margin-bottom: 0.3rem;">🆔 GST</label>
-                        <input type="text" id="gstNumber" placeholder="Optional" style="width: 100%; padding: 10px 8px; border-radius: 8px; border: 1px solid #FF6B35; font-size: 0.95rem;">
+                        <label style="display:block;font-size:1rem;color:#FF6B35;margin-bottom:0.5rem;font-weight:bold;">🆔 GST Number</label>
+                        <input type="text" id="gstNumber" placeholder="Optional" style="width:100%;padding:15px;border-radius:12px;border:2px solid #FF6B35;font-size:1rem;">
+                    </div>
+                    <div style="margin-bottom:2rem;">
+                        <label style="display:block;font-size:1rem;color:#00D4AA;margin-bottom:0.5rem;font-weight:bold;">🎨 Laminate Collection*</label>
+                        <select id="productSelect" required style="width:100%;padding:18px;border-radius:15px;border:2px solid #25D366;font-size:1.2rem;background:white;">
+                            <option value="">Choose Collection</option>
+                            <option value="Harshwal Rangoli">🌺 Harshwal Rangoli</option>
+                            <option value="Archi Louvers">🏛️ Archi Louvers</option>
+                            <option value="Vivere APEX">⭐ Vivere APEX</option>
+                            <option value="Vivere Louvers">🎨 Vivere Louvers</option>
+                            <option value="CRYSLA LINK">💎 CRYSLA LINK</option>
+                            <option value="Vivere Quarry">🪨 Vivere Quarry</option>
+                            <option value="Lamilaxe Link">🔗 Lamilaxe Link</option>
+                            <option value="Vivere Finesse">✨ Vivere Finesse</option>
+                            <option value="Moroly NEW">🌺 Moroly NEW</option>
+                        </select>
                     </div>
                 </div>
-                <div style="margin-bottom: 2rem;">
-                    <label style="display: block; font-size: 0.9rem; color: #00D4AA; margin-bottom: 0.3rem;">🎨 Which Laminate? *</label>
-                    <select id="productSelect" required style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #228B22; font-size: 1.1rem; background: white;">
-                        <option value="">Select Product</option>
-                        <option value="Harshwal Rangoli">Harshwal Rangoli</option>
-                        <option value="Archi Louvers">Archi Louvers</option>
-                        <option value="Vivere APEX">Vivere APEX</option>
-                        <option value="Vivere Louvers">Vivere Louvers</option>
-                        <option value="CRYSLA LINK">CRYSLA LINK</option>
-                        <option value="Vivere Quarry">Vivere Quarry</option>
-                        <option value="Lamilaxe Link">Lamilaxe Link</option>
-                        <option value="Vivere Finesse">Vivere Finesse</option>
-                    </select>
+                <div style="margin-bottom:2rem;">
+                    <label style="display:block;font-size:1rem;color:#00D4AA;margin-bottom:0.5rem;font-weight:bold;">🆕 Laminate Code *</label>
+                    <input type="text" id="laminateCode" required placeholder="JSK-123" style="width:100%;padding:18px;border-radius:15px;border:3px solid #00D4AA;font-size:1.2rem;text-transform:uppercase;">
                 </div>
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; font-size: 0.9rem; color: #00D4AA; margin-bottom: 0.3rem;">🆕 Code</label>
-                    <input type="text" id="laminateCode" required placeholder="JSK-123" style="width: 100%; padding: 10px 8px; border-radius: 8px; border: 2px solid #00D4AA; font-size: 1rem; text-transform: uppercase;">
+                <div style="margin-bottom:2.5rem;">
+                    <label style="display:block;font-size:1rem;color:#FF8C00;margin-bottom:0.5rem;font-weight:bold;">📍 Delivery Address *</label>
+                    <textarea id="deliveryAddress" required rows="3" placeholder="Your Bengaluru address" style="width:100%;padding:18px;border-radius:15px;border:2px solid #FF8C00;font-size:1rem;resize:vertical;"></textarea>
                 </div>
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; font-size: 0.9rem; color: #FF8C00; margin-bottom: 0.3rem;">📍 Address</label>
-                    <textarea id="deliveryAddress" required rows="2" placeholder="Bengaluru address" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #FF8C00; font-size: 0.95rem; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" style="background: linear-gradient(45deg, #25D366, #128C7E); color: white; font-size: 1.1rem; padding: 12px 20px; width: 100%; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
-                    🚀 SEND TO WHATSAPP
+                <button type="submit" class="btn whatsapp-btn" style="font-size:1.3rem;padding:20px 40px;width:100%;border-radius:35px;margin-top:1rem;">
+                    🚀 SEND ORDER TO WHATSAPP INSTANTLY
                 </button>
             </form>
-            <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">📱 Goes to 7625060711 instantly</p>
+            <p style="margin-top:2rem;font-size:1rem;opacity:0.9;">📱 Direct to 7625060711 • Response in 2 minutes!</p>
         </div>
     </section>
 
-    <section id="contact" style="background: linear-gradient(90deg, #FF8C00, #228B22); padding: 4rem 2rem; color: white; text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">🚚 Place Your Order</h2>
-            <p class="location" style="font-size: 1.3rem;">📍 No 1052/5, 7th Block, Near Green Unisex Salon, Annapurneshwari Nagar, Muddinapalya, Bangalore-560091, Karnataka</p>
-            <a href="https://wa.me/917625060711?text=Hi%20J.S.K.%20Decor!%20I%20want%20laminate%20sheets" class="btn" style="background: #25D366 !important; color: white !important; font-size: 1.8rem; padding: 25px 60px; margin: 1rem; display: inline-block;" target="_blank">
-                📱 ORDER NOW WhatsApp (7625060711)
-            </a>
-            <a href="tel:+917625060715" class="btn" style="background: #FF6B35 !important; color: white !important; font-size: 1.8rem; padding: 25px 60px; margin: 1rem; display: inline-block;">
-                ☎️ CALL OWNER (7625060715)
+   <!-- 🔥 EYE-COMFORT MATRIX - SOFT GLOW VERSION -->
+<section id="contact" style="
+    background: linear-gradient(135deg, #1a1a2a 0%, #16213e 50%, #0f0f23 100%);
+    position: relative; padding: 6rem 2rem; color: #e0e0e0; text-align: center; 
+    overflow: hidden;
+">
+
+    <!-- 🔥 SOFT SCAN LINE - Very subtle -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+        background: linear-gradient(90deg, transparent 49%, rgba(100,200,150,0.04) 50%, transparent 51%);
+        animation: softScan 6s linear infinite;"></div>
+    
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 100%;
+        background-image: 
+            repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(100,200,150,0.015) 4px, rgba(100,200,150,0.015) 8px),
+            repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(100,200,150,0.01) 6px, rgba(100,200,150,0.01) 12px);
+        animation: softGrid 25s linear infinite;"></div>
+
+    <style>
+    @keyframes softScan {0% {transform: translateX(-100%);}100% {transform: translateX(100%);}
+    }
+    @keyframes softGrid {0% {background-position: 0 0, 0 0;}100% {background-position: 80px 80px, 40px 40px;}
+    }
+    .soft-glow { 
+        text-shadow: 0 0 10px rgba(100,200,150,0.3), 0 0 20px rgba(100,200,150,0.1);
+        animation: softPulse 3s ease-in-out infinite alternate;
+    }
+    @keyframes softPulse {
+        0% {filter: brightness(1) drop-shadow(0 0 5px rgba(100,200,150,0.2));}
+        100% {filter: brightness(1.05) drop-shadow(0 0 12px rgba(100,200,150,0.3));}
+    }
+    </style>
+
+    <div class="container" style="position: relative; z-index: 10; max-width: 900px; margin: 0 auto;">
+        <h2 class="soft-glow" style="font-size: clamp(2.5rem, 6vw, 3.2rem); 
+            background: linear-gradient(135deg, #64c890, #a8e6cf); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 2.5rem; font-weight: 800;">
+            🏪 Visit Our Store
+        </h2>
+        
+        <!-- 🔥 SOFT 3D MAP CARD -->
+        <div style="perspective: 800px; margin-bottom: 4rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=7th%20Block%2C%201052/5%2C%20Muddinapalya%20Rd%2C%20Byregowda%20Layout%2C%20Annapurneshwari%20Nagar%2C%20Sir%20M%20Vishweshwaraiah%20Layout%202nd%20Block%2C%20Bengaluru%2C%20Karnataka%20560091" 
+               target="_blank" 
+               style="
+                display: inline-block; 
+                background: linear-gradient(145deg, rgba(100,200,150,0.12), rgba(100,200,150,0.06));
+                backdrop-filter: blur(20px); border: 1.5px solid rgba(100,200,150,0.25);
+                border-radius: 25px; padding: 2.5rem 3rem; 
+                transform-style: preserve-3d; transition: all 0.5s ease;
+                color: #e0e0e0; text-decoration: none; font-weight: 700; font-size: 1.35rem;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 20px rgba(100,200,150,0.15);">
+                
+                <div style="transform: translateZ(20px);">
+                    📍 <strong style="color: #64c890;">OPEN GOOGLE MAPS</strong>
+                    <div style="font-size: 1.1rem; margin-top: 1rem; opacity: 0.9; line-height: 1.6;">
+                        7th Block, 1052/5, Muddinapalya Rd<br>
+                        Byregowda Layout, Annapurneshwari Nagar<br>
+                        Sir M Vishweshwaraiah Layout 2nd Block<br>
+                        <span style="color: #a8e6cf; font-weight: 700;">Bengaluru 560091</span>
+                    </div>
+                </div>
             </a>
         </div>
-    </section>
 
-    <footer>
+        <!-- 🔥 ONLY WHATSAPP & CALL BUTTONS UPDATED -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 800px; margin: 0 auto 3rem;">
+
+    <!-- 🔥 NEW WHATSAPP STORE BUTTON -->
+    <a href="https://wa.me/917625060711?text=@Hi%20JSK%20Decor%20I%20want%20a%20laminate%20sheet" 
+       class="order-btn" 
+       target="_blank"
+       style="
+        position: relative; 
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #25D366 100%);
+        border: 2px solid rgba(255,255,255,0.2);
+        font-size: 1.5rem; padding: 22px 50px; min-width: 320px;
+        box-shadow: 
+            0 15px 35px rgba(37,211,102,0.4),
+            inset 0 1px 0 rgba(255,255,255,0.3);
+        backdrop-filter: blur(15px);
+    ">
+        📱 WhatsApp Store (7625060711)
+    </a>
+
+    <!-- 🔥 NEW CALL OWNER BUTTON -->
+    <a href="tel:+917625060715" 
+       class="order-btn" 
+       style="
+        position: relative; 
+        background: linear-gradient(135deg, #FF6B35 0%, #E55A30 50%, #FF6B35 100%);
+        border: 2px solid rgba(255,255,255,0.2);
+        font-size: 1.5rem; padding: 22px 50px; min-width: 320px;
+        box-shadow: 
+            0 15px 35px rgba(255,107,53,0.4),
+            inset 0 1px 0 rgba(255,255,255,0.3);
+        backdrop-filter: blur(15px);
+    ">
+        ☎️ Call Owner (7625060715)
+    </a>
+
+</div>
+
+        <!-- 🔥 COMFORTABLE TIME DISPLAY -->
+        <div style="
+            background: linear-gradient(135deg, rgba(100,200,150,0.08), rgba(40,80,60,0.15));
+            border: 1.5px solid rgba(100,200,150,0.3); border-radius: 20px;
+            padding: 2rem 2.5rem; display: inline-block; max-width: 450px; margin: 0 auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
+            
+            <div style="font-size: 1.4rem; background: linear-gradient(135deg, #64c890, #a8e6cf); 
+                         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+                         font-weight: 800; margin-bottom: 1rem;">
+                ⏰ Store Hours
+            </div>
+            
+            <div style="font-size: 1.15rem; line-height: 1.7; opacity: 0.95;">
+                <strong style="color: #64c890;">🟢 Mon-Sat: 9:30AM - 7:30PM</strong><br>
+                <strong style="color: #666;">🔴 Sunday: CLOSED</strong><br><br>
+                <span style="color: #a8e6cf; font-size: 1rem;">
+                    📦 Sunday Orders Delivered Monday
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 SUBTLE FLOATING DOTS -->
+    <div style="position: absolute; top: 25%; right: 8%; width: 40px; height: 40px;
+        background: radial-gradient(circle, rgba(100,200,150,0.2) 0%, transparent 70%);
+        border-radius: 50%; animation: softOrbit 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; bottom: 30%; left: 10%; width: 30px; height: 30px;
+        background: radial-gradient(circle, rgba(168,230,207,0.15) 0%, transparent 70%);
+        border-radius: 50%; animation: softOrbit 12s ease-in-out infinite reverse;"></div>
+</section>
+
+<style>
+@keyframes softOrbit {
+    0%, 100% {transform: translate(0,0) scale(1);}
+    33% {transform: translate(15px,-10px) scale(1.1);}
+    66% {transform: translate(10px,12px) scale(0.95);}
+}
+</style>
+
+
+    <footer class="glass" style="margin-top:5rem;">
         <div class="container">
-            <p>&copy; 2026 J.S.K. Decor. All rights reserved. | Bengaluru, Karnataka</p>
+            <p style="font-size:1.1rem;">&copy; 2026 J.S.K. Decor ✨ | Premium Laminates | Bengaluru, Karnataka</p>
         </div>
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded',function(){
         // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+            anchor.addEventListener('click',function(e){
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
             });
         });
-
+        
         // WhatsApp form
-        const form = document.getElementById('quickOrderForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
+        const form=document.getElementById('quickOrderForm');
+        if(form){
+            form.addEventListener('submit',function(e){
                 e.preventDefault();
-                const name = document.getElementById('customerName').value;
-                const phone = document.getElementById('customerPhone').value;
-                const gst = document.getElementById('gstNumber').value || 'Not provided';
-                const product = document.getElementById('productSelect').value;
-                const code = document.getElementById('laminateCode').value.toUpperCase();
-                const address = document.getElementById('deliveryAddress').value;
-                const message = `🆕 *ORDER FORM*\n\n👤 ${name}\n📱 ${phone}\n🆔 ${gst}\n🎨 ${product}\n🆕 CODE: ${code}\n📍 ${address}\n\nPlease confirm price!`;
-                window.open('https://wa.me/917625060711?text=' + encodeURIComponent(message), '_blank');
+                const name=document.getElementById('customerName').value;
+                const phone=document.getElementById('customerPhone').value;
+                const gst=document.getElementById('gstNumber').value||'Not provided';
+                const product=document.getElementById('productSelect').value;
+                const code=document.getElementById('laminateCode').value.toUpperCase();
+                const address=document.getElementById('deliveryAddress').value;
+                const message=`🆕 *J.S.K. DECOR ORDER* ✨\n\n👤 ${name}\n📱 ${phone}\n🆔 GST: ${gst}\n🎨 Collection: ${product}\n🆕 CODE: ${code}\n📍 Address: ${address}\n\n💰 Please send price & availability!`;
+                window.open('https://wa.me/917625060711?text='+encodeURIComponent(message),'_blank');
             });
         }
     });
