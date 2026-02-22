@@ -3,7 +3,7 @@
 <head> 
 <meta name="google-site-verification" content="aJKQe4W0idkIp2LlkvWkEDbsKzfo_RkFq3tB4tle1To" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
     <title>J.S.K. Decor | Premium Laminates Bengaluru</title>
     <style>
 /* 🔥 2026 TREND: GLASS + 3D + MICRO-ANIMATIONS */
@@ -295,6 +295,11 @@ footer {
     .hero-content {padding: 1.5rem;}
     .product-grid {gap: 1.5rem;}
 }
+@media (max-width: 768px) {
+    #pdfContainer { height: 60vh !important; max-width: 100vw !important; margin: 10px !important; }
+    #codeSearch { font-size: 20px !important; padding: 15px !important; }
+}
+
     </style>
 </head>
 <body>
@@ -633,17 +638,22 @@ function searchCode() {
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('codeSearch');
     
-    // Enter key
+    // Enter key ✅ PERFECT
     input.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') searchCode();
     });
     
-    // Click input → search
-    input.addEventListener('click', searchCode);
+    // Click input → search ONLY if code exists ✅ FIXED
+    input.addEventListener('click', function() {
+        if (input.value.trim()) searchCode();
+    });
     
-    // Double-click → search
+    // Double-click → search (optional, but good) ✅ PERFECT
     input.addEventListener('dblclick', searchCode);
     
+    input.focus(); // Auto-focus ✅ PERFECT
+});
+
     // Dynamic button text
     input.addEventListener('input', function() {
         const results = document.getElementById('searchResults');
